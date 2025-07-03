@@ -4,6 +4,7 @@ import { dirname } from "path";
 import path from "path";
 import { fileURLToPath } from "url";
 import axios from "axios";
+import dotenv from "dotenv";
 
 const app = express();
 const PORT = process.env.PORT || 3000;

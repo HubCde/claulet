@@ -105,14 +105,14 @@
         </div>
         <h1>Acceso al Sistema</h1>
 
-        <form>
+        <form id="login-form">
             <div class="mb-3 text-start">
-                <label for="emailInput" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="tu@ejemplo.com" required>
+                <label for="emailInput" class="form-label">Usuario</label>
+                <input name="usuario" class="form-control" placeholder="Usuario1" required>
             </div>
             <div class="mb-4 text-start">
                 <label for="passwordInput" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="passwordInput" placeholder="********" required>
+                <input name="contrasena" type="password" class="form-control" placeholder="********" required>
             </div>
             <button type="submit" class="btn btn-login">Iniciar Sesión</button>
         </form>
@@ -121,39 +121,33 @@
             <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
 
-        <!-- Mensaje de error/éxito (oculto por defecto) -->
-        <div id="loginMessage" class="alert-message alert-danger d-none" role="alert">
-            <!-- Mensaje de error: "Credenciales incorrectas. Inténtalo de nuevo." -->
-        </div>
     </div>
 
     <!-- Bootstrap Bundle con Popper -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Simulación de un mensaje de login
-        document.querySelector('form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Evita el envío del formulario
-            const loginMessage = document.getElementById('loginMessage');
+    <!-- <script>
+        // controlador de inicio de sesion desde axios
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginForm = document.querySelector("#login-form");
+            if (loginForm) {
+                loginForm.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(loginForm);
+                    const datos = Object.fromEntries(formData.entries());
 
-            // Simula un login exitoso o fallido
-            const isSuccess = Math.random() > 0.5; // 50% de probabilidad de éxito
-
-            loginMessage.classList.remove('d-none', 'alert-success', 'alert-danger');
-            if (isSuccess) {
-                loginMessage.classList.add('alert-success');
-                loginMessage.textContent = '¡Inicio de sesión exitoso! Redirigiendo...';
-                // En una app real, aquí se redirigiría al dashboard correspondiente
-            } else {
-                loginMessage.classList.add('alert-danger');
-                loginMessage.textContent = 'Credenciales incorrectas. Inténtalo de nuevo.';
+                    try {
+                        const res = await axios.post("/api/login", datos);
+                        window.location.href = res.data.redireccion; // redirige según el backend
+                    } catch (err) {
+                        alert("Credenciales incorrectas :'()");
+                    }
+                });
             }
-
-            setTimeout(() => {
-                loginMessage.classList.add('d-none');
-            }, 3000); // Ocultar mensaje después de 3 segundos
         });
-    </script>
+
+    </script> -->
 </body>
 
 </html>

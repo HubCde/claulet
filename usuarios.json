@@ -1,0 +1,14 @@
+{
+  "admin": {
+    "contrasena": "admin123",
+    "rol": "admin"
+  },
+  "organizador_maria": {
+    "contrasena": "clave456",
+    "rol": "organizador"
+  },
+  "host_juan": {
+    "contrasena": "clave789",
+    "rol": "host"
+  }
+}

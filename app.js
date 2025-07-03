@@ -16,10 +16,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Renderiza la vista del dash board inicial. (tener cuidado)
 app.get("/admin", (req, res) => {
-  res.render("index.ejs");
+  res.render("dashboard_admin.ejs");
+});
+
+app.get("/host", (req, res) => {
+  res.render("dashboard_host.ejs");
+});
+
+app.get("/organizador", (req, res) => {
+  res.render("dashboard_organizador.ejs");
+});
+
+app.get("/scanner", (req, res) => {
+  res.render("scanner.ejs");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
 });
 
 // Inicia el servidor
 app.listen(PORT, () => {
   console.log("Servidor de claudet corriendo en http://localhost:3000");
+  console.log("Servidor de admin corriendo en http://localhost:3000/admin");
+  console.log("Servidor de host corriendo en http://localhost:3000/host");
+  console.log(
+    "Servidor de organizador corriendo en http://localhost:3000/organizador"
+  );
+  console.log("Servidor de login corriendo en http://localhost:3000/login");
+  console.log("Servidor de scanner corriendo en http://localhost:3000/scanner");
 });

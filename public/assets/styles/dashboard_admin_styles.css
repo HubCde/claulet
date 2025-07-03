@@ -1,0 +1,73 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar {
+  background-color: #343a40;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background-color: #6f42c1;
+  /* Un tono de morado/púrpura */
+  border-color: #6f42c1;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5a36a0;
+  border-color: #5a36a0;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+}
+
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  /* Para que los bordes redondeados se apliquen a la tabla */
+}
+
+.table thead {
+  background-color: #e9ecef;
+}
+
+/* Estilos para pestañas */
+.nav-pills .nav-link {
+  border-radius: 8px;
+  color: #343a40;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #6f42c1;
+  color: #ffffff;
+}

@@ -1,11 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
+import path from "path";
 import { fileURLToPath } from "url";
 import axios from "axios";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());

@@ -15,18 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //Seleccionamos el id de nuestro formulario y la guardamos en la variable formEvento
   const formEvento = document.querySelector("#form-evento");
+
   if (formEvento) {
     formEvento.addEventListener("submit", async (e) => {
       e.preventDefault();
       const datos = Object.fromEntries(new FormData(formEvento).entries());
 
       try {
-        await axios.post("/api/eventos", datos);
-        alert("Evento creado con éxito");
+        const res = await axios.post("/api/eventos", datos);
+        alert("Evento creado");
         window.location.href = "/admin";
       } catch (err) {
-        alert("Error al crear el evento");
+        console.error("Error al crear evento", err.response?.data || err);
+        alert("Error al crear evento");
       }
     });
   }

@@ -46,5 +46,9 @@
   "playa...": {
     "contrasena": "playa123",
     "rol": "evento"
+  },
+  "bosque": {
+    "contrasena": "bosque123",
+    "rol": "evento"
   }
 }

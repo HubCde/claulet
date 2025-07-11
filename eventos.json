@@ -70,5 +70,13 @@
     "fecha": "2025-07-30",
     "hora": "02:45",
     "lugar": "en la playa mas cercana Acapulco "
+  },
+  {
+    "usuario": "bosque",
+    "titulo": "fiesta en el bosque",
+    "descripcion": "es una fiesta en un bosque con fogata",
+    "fecha": "2025-07-23",
+    "hora": "03:19",
+    "lugar": "Campamento campbell"
   }
 ]

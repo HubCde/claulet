@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const crearEvento = async (req, res) => {
+    console.log("📥 Datos recibidos en /api/eventos:", req.body);
     const { usuario, contrasena, titulo, descripcion, fecha, hora, lugar } =
         req.body;
 
@@ -21,12 +22,16 @@ export const crearEvento = async (req, res) => {
         !hora ||
         !lugar
     ) {
+        console.log("❌ Faltan datos del formulario");
         return res.status(400).json({ error: "Faltan datos obligatorios" });
     }
 
     if (getUsuario(usuario)) {
+        console.log("⚠️ Usuario ya existe:", usuario);
         return res.status(409).json({ error: "Usuario ya existe" });
     }
+
+    console.log("✅ Usuario nuevo, procediendo a crear");
 
     // Crear usuario
     crearUsuario(usuario, { contrasena, rol: 'evento' });
@@ -37,14 +42,11 @@ export const crearEvento = async (req, res) => {
     guardarEventos(eventos);
 
     // Ruta de plantilla y de destino
-    const plantillaPath = path.join(__dirname, "views", "eventos", "base.ejs");
-    const destinoPath = path.join(
-        __dirname,
-        "views",
-        "eventos",
-        `${usuario}.ejs`
-    );
+    const plantillaPath = path.join(__dirname, "../views/eventos/base.ejs");
+    const destinoPath = path.join(__dirname, "../views/eventos",`${usuario}.ejs`);
 
+    console.log("📄 Ruta plantilla:", plantillaPath);
+    console.log("📝 Ruta destino:", destinoPath);
     // Renderizar con EJS
     try {
         const html = await ejs.renderFile(plantillaPath, {
@@ -56,9 +58,11 @@ export const crearEvento = async (req, res) => {
         });
 
         fs.writeFileSync(destinoPath, html);
+        console.log("✅ Plantilla creada correctamente para:", usuario);
         res.status(201).json({ mensaje: "Evento creado correctamente" });
     } catch (err) {
         console.error("Error al renderizar plantilla:", err);
+        console.error("❌ Error al renderizar plantilla:", err.message);
         res.status(500).json({ error: "Error al generar plantilla del evento" });
     }
 };

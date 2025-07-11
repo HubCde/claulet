@@ -1,21 +1,23 @@
 import express from "express";
-import bodyParser from "body-parser";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import ejs from "ejs";
+import { applyStaticMiddleware } from "./middleware/static.middleware.js";
+import { applyBodyParserMiddleware } from "./middleware/bodyParser.middleware.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 // Middleware
-app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
+applyStaticMiddleware(app, __dirname);
+applyBodyParserMiddleware(app);
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 

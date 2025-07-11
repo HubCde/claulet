@@ -30,5 +30,13 @@
   "yett": {
     "contrasena": "yet123",
     "rol": "evento"
+  },
+  "yet20": {
+    "contrasena": "yet1234",
+    "rol": "evento"
+  },
+  "usuario1": {
+    "contrasena": "usuario1123",
+    "rol": "evento"
   }
 }

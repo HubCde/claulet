@@ -33,7 +33,7 @@ npm install
 3. Inicia el servidor.
 
 ```
-node app.js
+node server.js
 
 ```
 

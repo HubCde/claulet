@@ -8,13 +8,11 @@ import { applyStaticMiddleware } from "./middleware/static.middleware.js";
 import { applyBodyParserMiddleware } from "./middleware/bodyParser.middleware.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Middleware
-
 applyStaticMiddleware(app, __dirname);
 applyBodyParserMiddleware(app);
 
@@ -151,14 +149,6 @@ app.get("/scanner", (req, res) => {
   res.render("scanner.ejs");
 });
 
-// Inicia el servidor
-app.listen(PORT, () => {
-  console.log("Servidor de claudet corriendo en http://localhost:3000");
-  console.log("Servidor de admin corriendo en http://localhost:3000/admin");
-  console.log("Servidor de host corriendo en http://localhost:3000/host");
-  console.log(
-    "Servidor de organizador corriendo en http://localhost:3000/organizador"
-  );
-  console.log("Servidor de login corriendo en http://localhost:3000/login");
-  console.log("Servidor de scanner corriendo en http://localhost:3000/scanner");
-});
+
+
+export default app;

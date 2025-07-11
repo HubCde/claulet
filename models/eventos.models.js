@@ -2,7 +2,7 @@ import fs from "fs";
 
 const rutaEventos = "eventos.json";
 
-const cargarEventos = () => {
+export const cargarEventos = () => {
   if (fs.existsSync(rutaEventos)) {
     const contenido = fs.readFileSync(rutaEventos, "utf8");
     return contenido ? JSON.parse(contenido) : [];
@@ -10,6 +10,6 @@ const cargarEventos = () => {
   return [];
 };
 
-const guardarEventos = (eventos) => {
+export const guardarEventos = (eventos) => {
   fs.writeFileSync(rutaEventos, JSON.stringify(eventos, null, 2));
 };

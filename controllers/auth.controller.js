@@ -1,4 +1,4 @@
-import { getUsuario } from "../models/usuarios.models";
+import { getUsuario } from "../models/usuarios.models.js";
 
 export const mostrarLogin = (req, res) => {
     res.render('login.ejs');

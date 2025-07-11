@@ -1,5 +1,5 @@
 import express from "express";
-import { mostrarDashboardAdmin, mostrarDashboardHost, mostrarDashboardOrganizador, mostrarScanner } from "../controllers/dashboard.controller";
+import { mostrarDashboardAdmin, mostrarDashboardHost, mostrarDashboardOrganizador, mostrarScanner } from "../controllers/dashboard.controller.js";
 
 const router = express.Router();
 

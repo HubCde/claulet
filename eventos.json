@@ -54,5 +54,21 @@
     "fecha": "2026-12-13",
     "hora": "05:05",
     "lugar": "la casa del usuario 1"
+  },
+  {
+    "usuario": "playa",
+    "titulo": "Fiesta loca en la playa",
+    "descripcion": "Fiesta chida en acapulco",
+    "fecha": "2025-07-30",
+    "hora": "02:45",
+    "lugar": "en la playa mas cercana Acapulco "
+  },
+  {
+    "usuario": "playa...",
+    "titulo": "Fiesta loca en la playa",
+    "descripcion": "Fiesta chida en acapulco",
+    "fecha": "2025-07-30",
+    "hora": "02:45",
+    "lugar": "en la playa mas cercana Acapulco "
   }
 ]

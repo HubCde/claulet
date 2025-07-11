@@ -1,5 +1,5 @@
-import { getUsuario, crearUsuario } from "../models/usuarios.models";
-import { guardarEventos, cargarEventos } from "../models/eventos.models";
+import { getUsuario, crearUsuario } from "../models/usuarios.models.js";
+import { guardarEventos, cargarEventos } from "../models/eventos.models.js";
 import path from "path";
 import { fileURLToPath } from "url"; 
 import ejs from "ejs";

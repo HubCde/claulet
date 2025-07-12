@@ -1,0 +1,74 @@
+<tbody>
+    <% if (eventos.length===0) { %>
+        <tr>
+            <td colspan="6" class="text-center text-muted">No hay eventos registrados.</td>
+        </tr>
+    <% } else { %>
+            <% eventos.forEach(evento=> { %>
+                <tr>
+                    <td>
+                        <%= evento.titulo %>
+                    </td>
+                    <td>
+                        <%= evento.fecha %>
+                    </td>
+                    <td>0</td> <!-- Confirmados (puedes ajustar estos datos más adelante) -->
+                    <td>0</td> <!-- Pendientes -->
+                    <td>0</td> <!-- Declinados -->
+                    <td>
+                        <button class="btn btn-sm btn-outline-secondary me-1" title="Editar" data-bs-toggle="modal"
+                            data-bs-target="#editEventModal"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-sm btn-outline-secondary me-1" title="Gestionar Invitados"><i
+                                class="fas fa-users"></i></button>
+                        <button class="btn btn-sm btn-outline-secondary me-1" title="Contraseñas" data-bs-toggle="modal"
+                            data-bs-target="#passwordModal"><i class="fas fa-key"></i></button>
+                        <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
+                                class="fas fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+                <% }) %>
+                    <% } %>
+</tbody>
+🧠 ¿Qué está pasando?
+if (eventos.length === 0) → muestra un mensaje si el array está vacío.
+
+forEach(evento => { ... }) → recorre todos los eventos y crea una fila por cada uno.
+
+<%= evento.titulo %> y similares → insertan dinámicamente los datos del evento.
+
+    🎁 Bonus: quédate con la plantilla lista para copiar
+    ejs
+    Copiar
+    Editar
+    <tbody>
+        <% if (eventos.length===0) { %>
+            <tr>
+                <td colspan="6" class="text-center text-muted">No hay eventos registrados.</td>
+            </tr>
+            <% } else { %>
+                <% eventos.forEach(evento=> { %>
+                    <tr>
+                        <td>
+                            <%= evento.titulo %>
+                        </td>
+                        <td>
+                            <%= evento.fecha %>
+                        </td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary me-1" title="Editar" data-bs-toggle="modal"
+                                data-bs-target="#editEventModal"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-sm btn-outline-secondary me-1" title="Gestionar Invitados"><i
+                                    class="fas fa-users"></i></button>
+                            <button class="btn btn-sm btn-outline-secondary me-1" title="Contraseñas"
+                                data-bs-toggle="modal" data-bs-target="#passwordModal"><i
+                                    class="fas fa-key"></i></button>
+                            <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <% } %>
+    </tbody>

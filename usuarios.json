@@ -50,5 +50,9 @@
   "bosque": {
     "contrasena": "bosque123",
     "rol": "evento"
+  },
+  "gumy": {
+    "contrasena": "gumy123",
+    "rol": "evento"
   }
 }

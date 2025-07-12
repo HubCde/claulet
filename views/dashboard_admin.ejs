@@ -170,7 +170,7 @@
                         </div>
                         <!-- Puedes añadir más contenido al dashboard aquí si es necesario -->
 
-                        <!-- Sección de Gestión de Eventos -->
+                        <!-- Sección de Gestión de Eventos (No tiene accion por el momento) -->
                         <div class="card mb-4">
                             <div class="card-header bg-white d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">Gestión de Eventos</h5>
@@ -231,7 +231,7 @@
                             </div>
                         </div>
 
-                        <!-- Sección de Configuración de Diseño (Ejemplo simple) -->
+                        <!-- Sección de Configuración de Diseño (No tiene funcionalidad por el momento) -->
                         <div class="card">
                             <div class="card-header bg-white">
                                 <h5 class="mb-0">Configuración de Diseño (Interfaz Organizadores)</h5>
@@ -259,76 +259,7 @@
                     </div>
 
                     <!-- Events Tab Content -->
-                    <div class="tab-pane fade" id="events-tab" role="tabpanel" aria-labelledby="events-link">
-                        <div class="card mb-4">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Gestión de Eventos</h5>
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#newEventModal"><i class="fas fa-plus me-1"></i> Nuevo
-                                    Evento</button>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th>Evento</th>
-                                                <th>Fecha</th>
-                                                <th>Confirmados</th>
-                                                <th>Pendientes</th>
-                                                <th>Declinados</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Boda de Ana y Juan</td>
-                                                <td>15/08/2025</td>
-                                                <td>120</td>
-                                                <td>30</td>
-                                                <td>5</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1" title="Editar"
-                                                        data-bs-toggle="modal" data-bs-target="#editEventModal"><i
-                                                            class="fas fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Gestionar Invitados"><i
-                                                            class="fas fa-users"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Contraseñas" data-bs-toggle="modal"
-                                                        data-bs-target="#passwordModal"><i
-                                                            class="fas fa-key"></i></button>
-                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                            class="fas fa-trash-alt"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>XV Años de Sofía</td>
-                                                <td>22/09/2025</td>
-                                                <td>80</td>
-                                                <td>15</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1" title="Editar"
-                                                        data-bs-toggle="modal" data-bs-target="#editEventModal"><i
-                                                            class="fas fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Gestionar Invitados"><i
-                                                            class="fas fa-users"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Contraseñas" data-bs-toggle="modal"
-                                                        data-bs-target="#passwordModal"><i
-                                                            class="fas fa-key"></i></button>
-                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                            class="fas fa-trash-alt"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                     <%- include('components/gestionEventos.ejs', { eventos }) %>
 
                     <!-- Guests Tab Content -->
                     <div class="tab-pane fade" id="guests-tab" role="tabpanel" aria-labelledby="guests-link">

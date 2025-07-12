@@ -4,9 +4,10 @@ Aplicación Web Desarrollada con **Node.js**, **Express** y **EJS**, esta app pe
 
 ---
 ## 🎢 Estructura de la app
+```bash
 
 Claulet/
-├── app.js                      # Configura middlewares y rutas
+├── app.js                      
 ├── server.js                   # Arranca el servidor
 ├── routes/
 │   ├── auth.routes.js
@@ -22,7 +23,7 @@ Claulet/
 ├── middleware/
 │   ├── bodyParser.middleware.js
 │   └── static.middleware.js
-├── views/                      # Tus EJS siguen aquí (login, eventos, dashboards)
+├── views/                      
 │   ├── login.ejs
 │   ├── eventos/
 │   │   ├── base.ejs
@@ -40,6 +41,7 @@ Claulet/
 └── package-lock.json
 └── package.json
 └── README.md
+```
 ---
 ## ⚙️ Tecnologías usadas
 

@@ -53,6 +53,17 @@ Claulet/
 - File System (`fs`) para manipular JSON
 
 ---
+## funcionalidades realizadas hasta el momento 🐱‍🏍
+
+- login funcionando (admin, host, organizador).
+- Creación de eventos desde el administrador al igual que su respectivo usuario.
+- Creacion de perfil del organizador desde el administrador (Con datos de su evento).
+- Edicion de eventos desde el administrador.
+- Edicion de perfil del organizador.
+- Eliminacion de eventos y perfil de los organizadores desde el administrador. 
+
+
+---
 
 ## 🛠️ Instalación
 

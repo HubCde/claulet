@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url"; 
 import ejs from "ejs";
 import fs from "fs";
+import { error } from "console";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -71,4 +72,30 @@ export const mostrarEvento = (req, res) => {
   const { usuario } = req.params;
   if (!getUsuario(usuario)) return res.status(404).send("Evento no encontrado");
   res.render(`eventos/${usuario}`);
+};
+
+export const eliminarEvento = (req, res) => {
+  console.log("📥 Parámetros recibidos:", req.params); 
+  const { usuario } = req.params;
+
+  console.log("🔍 Eliminando evento del usuario:", usuario);
+
+  const eventos = cargarEventos();
+  const eventosActualizados = eventos.filter(e => e.usuario !== usuario);
+
+  if (eventos.length === eventosActualizados.length) {
+    return res.status(404).json({ error: "Evento no encontrado" });
+  }
+
+  guardarEventos(eventosActualizados);
+
+  const rutaUsuarios = "usuarios.json";
+  let usuarios = JSON.parse(fs.readFileSync(rutaUsuarios, 'utf8'));
+  delete usuarios[usuario];
+  fs.writeFileSync(rutaUsuarios, JSON.stringify(usuarios, null, 2));
+
+  const rutaVista = path.join(__dirname, '../views/eventos', `${usuario}.ejs`);
+  if (fs.existsSync(rutaVista)) fs.unlinkSync(rutaVista);
+
+  res.json({ mensaje: "Evento eliminado correctamente" });
 };

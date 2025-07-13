@@ -40,31 +40,7 @@
     "lugar": "donde sea "
   },
   {
-    "usuario": "yet20",
-    "titulo": "yetlanezifest locochon",
-    "descripcion": "es una fiesta",
-    "fecha": "2025-03-14",
-    "hora": "23:28",
-    "lugar": "la casa de la yet"
-  },
-  {
-    "usuario": "usuario1",
-    "titulo": "fiesta del usuario 1",
-    "descripcion": "es la fiesta del usuario 1",
-    "fecha": "2026-12-13",
-    "hora": "05:05",
-    "lugar": "la casa del usuario 1"
-  },
-  {
     "usuario": "playa",
-    "titulo": "Fiesta loca en la playa",
-    "descripcion": "Fiesta chida en acapulco",
-    "fecha": "2025-07-30",
-    "hora": "02:45",
-    "lugar": "en la playa mas cercana Acapulco "
-  },
-  {
-    "usuario": "playa...",
     "titulo": "Fiesta loca en la playa",
     "descripcion": "Fiesta chida en acapulco",
     "fecha": "2025-07-30",
@@ -78,13 +54,5 @@
     "fecha": "2025-07-23",
     "hora": "03:19",
     "lugar": "Campamento campbell"
-  },
-  {
-    "usuario": "gumy",
-    "titulo": "gumy fest",
-    "descripcion": "es la fiesta de gumy",
-    "fecha": "2025-07-14",
-    "hora": "22:46",
-    "lugar": "en donde esta la gumy"
   }
 ]

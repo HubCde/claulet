@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // login
+
   const loginForm = document.querySelector("#login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
@@ -14,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Obtener datos del formulario crear evento
 
   //Seleccionamos el id de nuestro formulario y la guardamos en la variable formEvento
   const formEvento = document.querySelector("#form-evento");

@@ -31,28 +31,12 @@
     "contrasena": "yet123",
     "rol": "evento"
   },
-  "yet20": {
-    "contrasena": "yet1234",
-    "rol": "evento"
-  },
-  "usuario1": {
-    "contrasena": "usuario1123",
-    "rol": "evento"
-  },
   "playa": {
-    "contrasena": "playa123",
-    "rol": "evento"
-  },
-  "playa...": {
     "contrasena": "playa123",
     "rol": "evento"
   },
   "bosque": {
     "contrasena": "bosque123",
-    "rol": "evento"
-  },
-  "gumy": {
-    "contrasena": "gumy123",
     "rol": "evento"
   }
 }

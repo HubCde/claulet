@@ -21,41 +21,40 @@
                         </tr>
                     </thead>
                     <tbody>
+<% if (eventos.length === 0) { %>
+  <tr>
+    <td colspan="6" class="text-center text-muted">No hay eventos registrados.</td>
+  </tr>
+<% } else { %>
+  <% eventos.forEach(evento => { %>
+    <tr data-usuario="<%= evento.usuario %>">
+      <td><%= evento.titulo %></td>
+      <td><%= evento.fecha %></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>
+        <button class="btn btn-sm btn-outline-secondary me-1 btn-editar" title="Editar"
+          data-bs-toggle="modal" data-bs-target="#editEventModal"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-sm btn-outline-secondary me-1 btn-invitados" title="Gestionar Invitados">
+          <i class="fas fa-users"></i></button>
+        <button class="btn btn-sm btn-outline-secondary me-1 btn-contrasena" title="Contraseñas"
+          data-bs-toggle="modal" data-bs-target="#passwordModal"><i class="fas fa-key"></i></button>
+        <button class="btn btn-sm btn-outline-danger btn-eliminar" title="Eliminar">
+          <i class="fas fa-trash-alt"></i></button>
+      </td>
+    </tr>
+  <% }) %>
+<% } %>
 
-                        <% if (eventos.length===0) {%>
-                            <tr>
-                                <td colspan="6" class="text-center text-muted">No hay eventos registrados.</td>
-                            </tr>
-                            <% } else {%>
-                                <% eventos.forEach(evento=>{ %>
-                                    <tr>
-                                        <td>
-                                            <%= evento.titulo %>
-                                        </td>
-                                        <td>
-                                            <%= evento.fecha %>
-                                        </td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-secondary me-1" title="Editar"
-                                                data-bs-toggle="modal" data-bs-target="#editEventModal"><i
-                                                    class="fas fa-edit"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1"
-                                                title="Gestionar Invitados"><i class="fas fa-users"></i></button>
-                                            <button class="btn btn-sm btn-outline-secondary me-1" title="Contraseñas"
-                                                data-bs-toggle="modal" data-bs-target="#passwordModal"><i
-                                                    class="fas fa-key"></i></button>
-                                            <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                    class="fas fa-trash-alt"></i></button>
-                                        </td>
-                                    </tr>
-                                    <% }) %>
-                                        <% } %>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Script gestionEventos.js -->
+<script src="/gestionEventos.js"></script>

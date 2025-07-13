@@ -99,3 +99,20 @@ export const eliminarEvento = (req, res) => {
 
   res.json({ mensaje: "Evento eliminado correctamente" });
 };
+
+export const editarEvento = (req, res) => {
+    const { usuario } = req.params;
+    const { titulo, descripcion, fecha, hora, lugar } = req.body;
+
+    const eventos = cargarEventos();
+    const index = eventos.findIndex(e => e.usuario === usuario);
+
+    if (index === -1) {
+        return res.status(404).json({ error: "Evento no encontrado" });
+    }
+
+    eventos[index] = { ...eventos[index], titulo, descripcion, fecha, hora, lugar };
+    guardarEventos(eventos);
+
+    res.json({ mensaje: 'Evento actualizado correctamente🤙' });
+};

@@ -34,12 +34,24 @@
       <td>0</td>
       <td>0</td>
       <td>
-        <button class="btn btn-sm btn-outline-secondary me-1 btn-editar" title="Editar"
-          data-bs-toggle="modal" data-bs-target="#editEventModal"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-sm btn-outline-secondary me-1 btn-editar" 
+        title="Editar"
+        data-bs-toggle="modal" 
+        data-bs-target="#editEventModal"
+        data-usuario="<%= evento.usuario %>"
+        data-titulo="<%= evento.titulo %>"
+        data-fecha="<%= evento.fecha %>"
+        data-hora="<%= evento.hora %>"
+        data-lugar="<%= evento.lugar %>"
+        data-descripcion="<%= evento.descripcion %>"
+        ><i class="fas fa-edit"></i></button>
+
         <button class="btn btn-sm btn-outline-secondary me-1 btn-invitados" title="Gestionar Invitados">
           <i class="fas fa-users"></i></button>
+
         <button class="btn btn-sm btn-outline-secondary me-1 btn-contrasena" title="Contraseñas"
           data-bs-toggle="modal" data-bs-target="#passwordModal"><i class="fas fa-key"></i></button>
+
         <button class="btn btn-sm btn-outline-danger btn-eliminar" title="Eliminar">
           <i class="fas fa-trash-alt"></i></button>
       </td>

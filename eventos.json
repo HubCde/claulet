@@ -1,27 +1,11 @@
 [
   {
     "usuario": "chuy",
-    "titulo": "chuy1",
+    "titulo": "chuy fiesta loca",
     "descripcion": "chuy3",
     "fecha": "2025-08-01",
-    "hora": "09:46",
+    "hora": "01:00",
     "lugar": "chuy2"
-  },
-  {
-    "usuario": "pollo",
-    "titulo": "pollo fest",
-    "descripcion": "es el pollo fest 200",
-    "fecha": "2025-07-09",
-    "hora": "09:59",
-    "lugar": "pollo fest house"
-  },
-  {
-    "usuario": "pollit",
-    "titulo": "pollito fest 2000",
-    "descripcion": "Es el pollito fest 2000",
-    "fecha": "2025-09-09",
-    "hora": "10:06",
-    "lugar": "pollito fest house"
   },
   {
     "usuario": "chuy2",
@@ -41,10 +25,10 @@
   },
   {
     "usuario": "playa",
-    "titulo": "Fiesta loca en la playa",
+    "titulo": "Fiesta tranquis en la playa",
     "descripcion": "Fiesta chida en acapulco",
     "fecha": "2025-07-30",
-    "hora": "02:45",
+    "hora": "19:30",
     "lugar": "en la playa mas cercana Acapulco "
   },
   {

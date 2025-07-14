@@ -11,31 +11,29 @@
     "contrasena": "host789",
     "rol": "host"
   },
-  "chuy": {
-    "contrasena": "chuy123",
-    "rol": "evento",
-    "contrasena_organizador": "chuyloco"
-  },
   "chuy2": {
     "contrasena": "chuy123",
-    "rol": "evento"
+    "rol": "evento",
+    "contrasena_organizador": "contrasena123"
   },
   "yett": {
     "contrasena": "yet123",
-    "rol": "evento"
+    "rol": "evento",
+    "contrasena_organizador": "contrasena123"
   },
   "playa": {
     "contrasena": "playa123",
     "rol": "evento",
-    "contrasena_organizador": "localoca"
+    "contrasena_organizador": "contrasena123"
   },
   "bosque": {
     "contrasena": "bosque123",
-    "rol": "evento"
+    "rol": "evento",
+    "contrasena_organizador": "contrasena123"
   },
   "cris": {
     "contrasena": "cris123",
     "rol": "evento",
-    "contrasena_organizador": "cris"
+    "contrasena_organizador": "contrasena123"
   }
 }

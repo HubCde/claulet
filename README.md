@@ -61,6 +61,7 @@ Claulet/
 - Edicion de eventos desde el administrador.
 - Edicion de perfil del organizador.
 - Eliminacion de eventos y perfil de los organizadores desde el administrador. 
+- Cambio de contraseña desde el perfil administrador.
 
 
 ---

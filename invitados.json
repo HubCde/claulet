@@ -1,0 +1,50 @@
+{
+  "chuy2": [
+    {
+      "nombre": "yet",
+      "correo": "yet@yetla.com",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "pepe",
+      "correo": "pepe@hotmail.com",
+      "estatus": "Pendiente"
+    }
+  ],
+  "cris": [
+    {
+      "nombre": "chuy",
+      "correo": "elchuy@chuyyyy.com",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "claudy",
+      "correo": "cludy23@hotmail.com",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "ron",
+      "correo": "ron@hotmail.com",
+      "estatus": "Pendiente"
+    }
+  ],
+  "playa": [
+    {
+      "nombre": "Adrian marcelo",
+      "correo": "marcelo@hotmail.com",
+      "estatus": "Pendiente"
+    }
+  ],
+  "bosque": [
+    {
+      "nombre": "javi",
+      "correo": "javi@hotmail.com",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "homero",
+      "correo": "homero@hotmail.com",
+      "estatus": "Pendiente"
+    }
+  ]
+}

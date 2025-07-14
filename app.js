@@ -6,6 +6,7 @@ import { applyBodyParserMiddleware } from "./middleware/bodyParser.middleware.js
 import authRoutes from './routes/auth.routes.js';
 import eventosRoutes from './routes/eventos.routes.js';
 import dashboardRoutes from './routes/dashboard.routes.js';
+import invitadosRoutes from "./routes/invitados.routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,5 +23,6 @@ app.set("views", path.join(__dirname, "views"));
 app.use('/', authRoutes);
 app.use('/', eventosRoutes);
 app.use('/', dashboardRoutes);
+app.use("/api/invitados", invitadosRoutes);
 
 export default app;

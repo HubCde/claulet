@@ -200,176 +200,182 @@
                     <!-- Events Tab Content -->
                     <%- include('components/gestionEventos.ejs', { eventos }) %>
 
-                    <!-- Guests Tab Content -->
-                    <div class="tab-pane fade" id="guests-tab" role="tabpanel" aria-labelledby="guests-link">
-                        <div class="card mb-4">
-                            <div class="card-header bg-white">
-                                <h5 class="mb-0">Gestión de Invitados por Evento</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <label for="selectEventGuests" class="form-label">Seleccionar Evento</label>
-                                    <select class="form-select" id="selectEventGuests">
-                                        <option selected>Boda de Ana y Juan</option>
-                                        <option>XV Años de Sofía</option>
-                                    </select>
+                        <!-- Guests Tab Content -->
+                        <div class="tab-pane fade" id="guests-tab" role="tabpanel" aria-labelledby="guests-link">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Gestión de Invitados por Evento</h5>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h6>Lista de Invitados</h6>
-                                    <div>
-                                        <button class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fas fa-upload me-1"></i> Subir Lista (CSV/Excel)</button>
-                                        <button class="btn btn-primary btn-sm"><i class="fas fa-plus me-1"></i> Añadir
-                                            Invitado</button>
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-hover mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Correo</th>
-                                                <th>Estatus</th>
-                                                <th>QR</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>María García</td>
-                                                <td>maria.g@email.com</td>
-                                                <td>Confirmado</td>
-                                                <td><button class="btn btn-sm btn-outline-info" title="Ver QR"><i
-                                                            class="fas fa-qrcode"></i></button></td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Editar"><i class="fas fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                            class="fas fa-trash-alt"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Carlos López</td>
-                                                <td>carlos.l@email.com</td>
-                                                <td>Pendiente</td>
-                                                <td><button class="btn btn-sm btn-outline-info" title="Ver QR"><i
-                                                            class="fas fa-qrcode"></i></button></td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-outline-secondary me-1"
-                                                        title="Editar"><i class="fas fa-edit"></i></button>
-                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                            class="fas fa-trash-alt"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Templates Tab Content -->
-                    <div class="tab-pane fade" id="templates-tab" role="tabpanel" aria-labelledby="templates-link">
-                        <div class="card mb-4">
-                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Gestión de Plantillas de Invitación</h5>
-                                <button class="btn btn-primary btn-sm"><i class="fas fa-upload me-1"></i> Subir Nueva
-                                    Plantilla</button>
-                            </div>
-                            <div class="card-body">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+1"
-                                                class="card-img-top" alt="Plantilla 1">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Clásica Elegante</h5>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Previsualizar"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Editar HTML"><i class="fas fa-code"></i></button>
-                                                <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+2"
-                                                class="card-img-top" alt="Plantilla 2">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Moderna Minimalista</h5>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Previsualizar"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Editar HTML"><i class="fas fa-code"></i></button>
-                                                <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card h-100">
-                                            <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+3"
-                                                class="card-img-top" alt="Plantilla 3">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Temática Floral</h5>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Previsualizar"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-sm btn-outline-secondary me-1"
-                                                    title="Editar HTML"><i class="fas fa-code"></i></button>
-                                                <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
-                                                        class="fas fa-trash-alt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Settings Tab Content -->
-                    <div class="tab-pane fade" id="settings-tab" role="tabpanel" aria-labelledby="settings-link">
-                        <div class="card">
-                            <div class="card-header bg-white">
-                                <h5 class="mb-0">Configuración General</h5>
-                            </div>
-                            <div class="card-body">
-                                <h6 class="mb-3">Configuración de Diseño (Interfaz Organizadores)</h6>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="colorScheme" class="form-label">Esquema de Color</label>
-                                        <select class="form-select" id="colorScheme">
-                                            <option selected>Minimalista Azul</option>
-                                            <option>Elegante Gris</option>
-                                            <option>Vivo Púrpura</option>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="selectEventGuests" class="form-label">Seleccionar Evento</label>
+                                        <select class="form-select" id="selectEventGuests">
+                                            <% eventos.forEach(evento=> { %>
+                                                <option value="<%= evento.usuario %>">
+                                                    <%= evento.titulo %>
+                                                </option>
+                                                <% }) %>
                                         </select>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="logoUpload" class="form-label">Logo para Organizadores</label>
-                                        <input class="form-control" type="file" id="logoUpload">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h6>Lista de Invitados</h6>
+                                        <div>
+                                            <button class="btn btn-outline-primary btn-sm me-2"><i
+                                                    class="fas fa-upload me-1"></i> Subir Lista (CSV/Excel)</button>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#modalAgregarInvitado"><i class="fas fa-plus me-1"></i>
+                                                Añadir
+                                                Invitado</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <h6 class="mb-3 mt-4">Configuración de Acceso</h6>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="adminEmail" class="form-label">Correo de Administrador</label>
-                                        <input type="email" class="form-control" id="adminEmail"
-                                            value="admin@invitaciones.com">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Correo</th>
+                                                    <th>Estatus</th>
+                                                    <th>QR</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- <tr>
+                                                    <td>María García</td>
+                                                    <td>maria.g@email.com</td>
+                                                    <td>Confirmado</td>
+                                                    <td><button class="btn btn-sm btn-outline-info" title="Ver QR"><i
+                                                                class="fas fa-qrcode"></i></button></td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary me-1"
+                                                            title="Editar"><i class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"
+                                                            title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Carlos López</td>
+                                                    <td>carlos.l@email.com</td>
+                                                    <td>Pendiente</td>
+                                                    <td><button class="btn btn-sm btn-outline-info" title="Ver QR"><i
+                                                                class="fas fa-qrcode"></i></button></td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-outline-secondary me-1"
+                                                            title="Editar"><i class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-outline-danger"
+                                                            title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="adminPassword" class="form-label">Cambiar Contraseña de
-                                            Administrador</label>
-                                        <input type="password" class="form-control" id="adminPassword"
-                                            placeholder="********">
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <button class="btn btn-primary">Guardar Configuración</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <!-- Templates Tab Content -->
+                        <div class="tab-pane fade" id="templates-tab" role="tabpanel" aria-labelledby="templates-link">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Gestión de Plantillas de Invitación</h5>
+                                    <button class="btn btn-primary btn-sm"><i class="fas fa-upload me-1"></i> Subir
+                                        Nueva
+                                        Plantilla</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                                        <div class="col">
+                                            <div class="card h-100">
+                                                <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+1"
+                                                    class="card-img-top" alt="Plantilla 1">
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title">Clásica Elegante</h5>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Previsualizar"><i class="fas fa-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Editar HTML"><i class="fas fa-code"></i></button>
+                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
+                                                            class="fas fa-trash-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card h-100">
+                                                <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+2"
+                                                    class="card-img-top" alt="Plantilla 2">
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title">Moderna Minimalista</h5>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Previsualizar"><i class="fas fa-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Editar HTML"><i class="fas fa-code"></i></button>
+                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
+                                                            class="fas fa-trash-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card h-100">
+                                                <img src="https://placehold.co/300x200/e9ecef/555?text=Plantilla+3"
+                                                    class="card-img-top" alt="Plantilla 3">
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title">Temática Floral</h5>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Previsualizar"><i class="fas fa-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary me-1"
+                                                        title="Editar HTML"><i class="fas fa-code"></i></button>
+                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar"><i
+                                                            class="fas fa-trash-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Settings Tab Content -->
+                        <div class="tab-pane fade" id="settings-tab" role="tabpanel" aria-labelledby="settings-link">
+                            <div class="card">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">Configuración General</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-3">Configuración de Diseño (Interfaz Organizadores)</h6>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="colorScheme" class="form-label">Esquema de Color</label>
+                                            <select class="form-select" id="colorScheme">
+                                                <option selected>Minimalista Azul</option>
+                                                <option>Elegante Gris</option>
+                                                <option>Vivo Púrpura</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="logoUpload" class="form-label">Logo para Organizadores</label>
+                                            <input class="form-control" type="file" id="logoUpload">
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-3 mt-4">Configuración de Acceso</h6>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="adminEmail" class="form-label">Correo de Administrador</label>
+                                            <input type="email" class="form-control" id="adminEmail"
+                                                value="admin@invitaciones.com">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="adminPassword" class="form-label">Cambiar Contraseña de
+                                                Administrador</label>
+                                            <input type="password" class="form-control" id="adminPassword"
+                                                placeholder="********">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <button class="btn btn-primary">Guardar Configuración</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -449,24 +455,22 @@
                     <form id="formEditarEvento">
                         <input type="hidden" id="editEventUsuario">
                         <div class="mb-3">
-                            <label  for="editEventName" class="form-label">Nombre del Evento</label>
-                            <input type="text" class="form-control" id="editEventName" 
-                                required>
+                            <label for="editEventName" class="form-label">Nombre del Evento</label>
+                            <input type="text" class="form-control" id="editEventName" required>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="editEventDate" class="form-label">Fecha</label>
-                                <input type="date" class="form-control" id="editEventDate"  required>
+                                <input type="date" class="form-control" id="editEventDate" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="editEventTime" class="form-label">Hora</label>
-                                <input type="time" class="form-control" id="editEventTime"  required>
+                                <input type="time" class="form-control" id="editEventTime" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="editEventLocation" class="form-label">Lugar</label>
-                            <input type="text" class="form-control" id="editEventLocation" 
-                                required>
+                            <input type="text" class="form-control" id="editEventLocation" required>
                         </div>
                         <div class="mb-3">
                             <label for="editInvitationMessage" class="form-label">Mensaje de Bienvenida
@@ -480,7 +484,7 @@
                             <input class="form-control" type="file" id="editHtmlTemplateUpload" accept=".html">
                             <small class="text-muted">Plantilla actual: boda_template.html</small>
                         </div>
-                    </form>  
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -516,12 +520,42 @@
         </div>
     </div>
 
+    <!-- MODAL: Añadir Invitado -->
+    <div class="modal fade" id="modalAgregarInvitado" tabindex="-1" aria-labelledby="modalAgregarInvitadoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formAgregarInvitado" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgregarInvitadoLabel">Añadir Invitado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="eventoSeleccionadoInput">
+                    <div class="mb-3">
+                        <label for="nombreInvitado" class="form-label">Nombre del invitado</label>
+                        <input type="text" class="form-control" id="nombreInvitado" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="correoInvitado" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="correoInvitado" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar Invitado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Bootstrap Bundle con Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/public/main.js"></script>
     <script src="/actualizarEvento.js"></script>
     <script src="/cambiarContrasena.js"></script>
+    <script src="/agregarInvitado.js"></script>
+    <script src="/gestionInvitados.js"></script>
+
 
     <script>
         // Script para alternar la barra lateral en pantallas pequeñas

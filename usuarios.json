@@ -13,7 +13,8 @@
   },
   "chuy": {
     "contrasena": "chuy123",
-    "rol": "evento"
+    "rol": "evento",
+    "contrasena_organizador": "chuyloco"
   },
   "chuy2": {
     "contrasena": "chuy123",
@@ -25,10 +26,16 @@
   },
   "playa": {
     "contrasena": "playa123",
-    "rol": "evento"
+    "rol": "evento",
+    "contrasena_organizador": "localoca"
   },
   "bosque": {
     "contrasena": "bosque123",
     "rol": "evento"
+  },
+  "cris": {
+    "contrasena": "cris123",
+    "rol": "evento",
+    "contrasena_organizador": "cris"
   }
 }

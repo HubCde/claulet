@@ -116,3 +116,24 @@ export const editarEvento = (req, res) => {
 
     res.json({ mensaje: 'Evento actualizado correctamente🤙' });
 };
+
+export const cambiarContrasenas = (req, res) => {
+  const { usuario } = req.params;
+  const { contrasena_organizador, contrasena_scanner } = req.body;
+
+  const rutaUsuarios = "usuarios.json";
+  const usuarios = JSON.parse(fs.readFileSync(rutaUsuarios, "utf8"));
+
+  if (!usuarios[usuario]) {
+    return res.status(404).json({ error: "Usuario no encontrado" });
+  }
+
+  usuarios[usuario].contrasena_organizador = contrasena_organizador;
+  usuarios[usuario].contrasena_scanner = contrasena_scanner;
+
+  fs.writeFileSync(rutaUsuarios, JSON.stringify(usuarios, null, 2));
+
+  res.json({ mensaje: "✅ Contraseñas actualizadas correctamente" });
+};
+
+

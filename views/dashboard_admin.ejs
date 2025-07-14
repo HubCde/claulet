@@ -499,14 +499,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formCambiarContrasena">
+                        <input type="hidden" id="usuarioParaContrasena">
+
                         <div class="mb-3">
                             <label for="organizerPass" class="form-label">Contraseña para Organizadores</label>
                             <input type="password" class="form-control" id="organizerPass" value="orgpass123">
-                        </div>
-                        <div class="mb-3">
-                            <label for="scannerPass" class="form-label">Contraseña para Escáner QR</label>
-                            <input type="password" class="form-control" id="scannerPass" value="scanpass456">
                         </div>
                     </form>
                 </div>
@@ -523,6 +521,8 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/public/main.js"></script>
     <script src="/actualizarEvento.js"></script>
+    <script src="/cambiarContrasena.js"></script>
+
     <script>
         // Script para alternar la barra lateral en pantallas pequeñas
         var sidebarToggle = document.getElementById('sidebarToggle');

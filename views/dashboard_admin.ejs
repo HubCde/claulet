@@ -220,7 +220,8 @@
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h6>Lista de Invitados</h6>
                                         <div>
-                                            <button class="btn btn-outline-primary btn-sm me-2"><i
+                                            <input type="file" id="inputSubirLista" accept=".xlsx,.csv" style="display: none;">
+                                            <button class="btn btn-outline-primary btn-sm me-2" id="btnSubirLista"><i
                                                     class="fas fa-upload me-1"></i> Subir Lista (CSV/Excel)</button>
                                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                                 data-bs-target="#modalAgregarInvitado"><i class="fas fa-plus me-1"></i>
@@ -539,6 +540,36 @@
                         <label for="correoInvitado" class="form-label">Correo electrónico</label>
                         <input type="email" class="form-control" id="correoInvitado" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="confirmarPor" class="form-label">Confirmar Por</label>
+                        <input type="text" class="form-control" id="confirmarPor" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="codPais" class="form-label">LADA</label>
+                        <select id="lada" name="lada" required>
+                            <option value="">Selecciona</option>
+                            <option value="+52">🇲🇽 México (+52)</option>
+                            <option value="+1">🇺🇸 USA (+1)</option>
+                            <option value="+34">🇪🇸 España (+34)</option>
+                            <option value="+57">🇨🇴 Colombia (+57)</option>
+                            <option value="+54">🇦🇷 Argentina (+54)</option>
+                            <!-- Queda pendiente agregar mas ladas... -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cellInv" class="form-label">Celular</label>
+                        <input type="tel"  class="form-control" id="cellInv" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlInv" class="form-label">URL de invitación</label>
+                        <input type="url" pattern="^\+?[0-9\s\-]{7,15}$" class="form-control" id="urlInv" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="comentariosInv" class="form-label">Comentarios</label>
+                        <input type="text" class="form-control" id="comentariosInv" required>
+                    </div>
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Guardar Invitado</button>

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tbody.insertAdjacentHTML("beforeend", `
           <tr>
             <td>${inv.nombre}</td>
-            <td>${inv.correo}</td>
+            <td>${inv.lada} ${inv.whats}</td>
             <td>${inv.estatus}</td>
             <td><button class="btn btn-sm btn-outline-info"><i class="fas fa-qrcode"></i></button></td>
             <td>

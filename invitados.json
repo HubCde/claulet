@@ -1,49 +1,23 @@
 {
   "chuy2": [
     {
-      "nombre": "yet",
-      "correo": "yet@yetla.com",
-      "estatus": "Pendiente"
-    },
-    {
       "nombre": "pepe",
-      "correo": "pepe@hotmail.com",
-      "estatus": "Pendiente"
-    }
-  ],
-  "cris": [
-    {
-      "nombre": "chuy",
-      "correo": "elchuy@chuyyyy.com",
-      "estatus": "Pendiente"
-    },
-    {
-      "nombre": "claudy",
-      "correo": "cludy23@hotmail.com",
-      "estatus": "Pendiente"
-    },
-    {
-      "nombre": "ron",
-      "correo": "ron@hotmail.com",
+      "confirmar": "2",
+      "lada": "+52",
+      "whats": "4426055052",
+      "urlInv": "http://pepe.com",
+      "coments": "no aplica",
       "estatus": "Pendiente"
     }
   ],
   "playa": [
     {
-      "nombre": "Adrian marcelo",
-      "correo": "marcelo@hotmail.com",
-      "estatus": "Pendiente"
-    }
-  ],
-  "bosque": [
-    {
-      "nombre": "javi",
-      "correo": "javi@hotmail.com",
-      "estatus": "Pendiente"
-    },
-    {
-      "nombre": "homero",
-      "correo": "homero@hotmail.com",
+      "nombre": "chuy",
+      "confirmar": "5",
+      "lada": "+52",
+      "whats": "442373536",
+      "urlInv": "https://chuy.com",
+      "coments": "na",
       "estatus": "Pendiente"
     }
   ]

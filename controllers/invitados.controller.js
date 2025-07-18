@@ -2,9 +2,12 @@ import { cargarInvitados, guardarInvitados } from "../models/invitados.models.js
 
 export const agregarInvitado = (req, res) => {
   const { evento } = req.params;
-  const { nombre, correo, estatus } = req.body;
+  const { nombre, confirmar, lada, whats, urlInv, coments, estatus } = req.body;
+  console.log("🚀 Se recibieron los datos correctamente 😎");
+  console.log(req.body);
 
-  if (!nombre || !correo || !estatus) {
+  if (!nombre || !confirmar || !lada || !whats || !urlInv || !coments || !estatus) {
+    console.log("🤦‍♂️ Tsss te faltaron datos");
     return res.status(400).json({ error: "Faltan datos del invitado" });
   }
 
@@ -12,7 +15,7 @@ export const agregarInvitado = (req, res) => {
 
   if (!data[evento]) data[evento] = [];
 
-  data[evento].push({ nombre, correo, estatus });
+  data[evento].push({ nombre, confirmar, lada, whats, urlInv, coments, estatus });
 
   guardarInvitados(data);
 

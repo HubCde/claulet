@@ -8,6 +8,33 @@
       "urlInv": "http://pepe.com",
       "coments": "no aplica",
       "estatus": "Pendiente"
+    },
+    {
+      "nombre": "Juan Pérez",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1234567890",
+      "urlInv": "https://wa.me/521234",
+      "coments": "Confirmado asistencia",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "Ana Gómez",
+      "confirmar": "No",
+      "lada": "+52",
+      "whats": "0987654321",
+      "urlInv": "https://wa.me/529876",
+      "coments": "No asistirá",
+      "estatus": "Cancelado"
+    },
+    {
+      "nombre": "Luis Martínez",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1122334455",
+      "urlInv": "https://wa.me/521122",
+      "coments": "Llegará tarde",
+      "estatus": "Pendiente"
     }
   ],
   "playa": [
@@ -18,6 +45,55 @@
       "whats": "442373536",
       "urlInv": "https://chuy.com",
       "coments": "na",
+      "estatus": "Pendiente"
+    }
+  ],
+  "claudy": [
+    {
+      "nombre": "chuy",
+      "confirmar": "1",
+      "lada": "+52",
+      "whats": "4426055052",
+      "urlInv": "https://InvitacionChuy.com",
+      "coments": "NA",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "yet",
+      "confirmar": "3",
+      "lada": "+52",
+      "whats": "4426086765",
+      "urlInv": "http://layet.com",
+      "coments": "NA",
+      "estatus": "Pendiente"
+    }
+  ],
+  "yett": [
+    {
+      "nombre": "gary",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1234567892",
+      "urlInv": "https://wa.me/521233",
+      "coments": "Confirmado asistencia",
+      "estatus": "Pendiente"
+    },
+    {
+      "nombre": "don cangrejo",
+      "confirmar": "No",
+      "lada": "+52",
+      "whats": "0987654323",
+      "urlInv": "https://wa.me/529833",
+      "coments": "No asistirá",
+      "estatus": "Cancelado"
+    },
+    {
+      "nombre": "Arenita mejillas",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1122334457",
+      "urlInv": "https://wa.me/521133",
+      "coments": "Llegará tarde",
       "estatus": "Pendiente"
     }
   ]

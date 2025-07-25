@@ -30,5 +30,13 @@
     "fecha": "2025-07-23",
     "hora": "03:19",
     "lugar": "Campamento campbell o donde nos agarre la noche "
+  },
+  {
+    "usuario": "claudy",
+    "titulo": "Geek party",
+    "descripcion": "Es la fiesta de claudy",
+    "fecha": "2025-07-31",
+    "hora": "20:43",
+    "lugar": "Queretaro"
   }
 ]

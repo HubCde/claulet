@@ -12,17 +12,21 @@ Claulet/
 ├── routes/
 │   ├── auth.routes.js
 │   ├── eventos.routes.js
-│   └── dashboard.routes.js
+│   ├── dashboard.routes.js
+│   └── invitados.routes.js
 ├── controllers/
 │   ├── auth.controller.js
 │   ├── eventos.controller.js
-│   └── dashboard.controller.js
+│   ├── dashboard.controller.js
+│   └── invitados.controller.js
 ├── models/
 │   ├── usuarios.model.js
-│   └── eventos.model.js
+│   ├── eventos.model.js
+│   └── invitados.model.js
 ├── middleware/
 │   ├── bodyParser.middleware.js
-│   └── static.middleware.js
+│   ├── static.middleware.js
+│   └── upload.middleware.js
 ├── views/                      
 │   ├── login.ejs
 │   ├── eventos/
@@ -35,7 +39,14 @@ Claulet/
 ├── public/
 │   ├── assets/...
 │   ├── index.html
+│   ├── actualizarEvento.js
+│   ├── agregarInvitado.js
+│   ├── cambiarContrasena.js
+│   ├── gestionEventos.js
+│   ├── gestionInvitados.js
+│   ├── subirListaInvitados.js
 │   └── main.js
+├── temp_uploads/
 └── usuarios.json
 └── eventos.json
 └── package-lock.json
@@ -51,6 +62,10 @@ Claulet/
 - Axios (peticiones desde el cliente)
 - Bootstrap (estilos)
 - File System (`fs`) para manipular JSON
+- xlsx
+- multer
+- dotenv
+- nodemon
 
 ---
 ## funcionalidades realizadas hasta el momento 🐱‍🏍

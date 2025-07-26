@@ -11,18 +11,8 @@
     "contrasena": "host789",
     "rol": "host"
   },
-  "chuy2": {
-    "contrasena": "chuy123",
-    "rol": "evento",
-    "contrasena_organizador": "contrasena123"
-  },
   "yett": {
     "contrasena": "yet123",
-    "rol": "evento",
-    "contrasena_organizador": "contrasena123"
-  },
-  "playa": {
-    "contrasena": "playa123",
     "rol": "evento",
     "contrasena_organizador": "contrasena123"
   },

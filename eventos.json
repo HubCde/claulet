@@ -1,27 +1,11 @@
 [
   {
-    "usuario": "chuy2",
-    "titulo": "chuy fest 2000",
-    "descripcion": "la fiesta de chuy",
-    "fecha": "2025-07-18",
-    "hora": "10:19",
-    "lugar": "chuy fest house"
-  },
-  {
     "usuario": "yett",
     "titulo": "la yetfest 2.0",
     "descripcion": "la yet fest fiesta",
     "fecha": "2025-07-15",
     "hora": "22:35",
     "lugar": "donde sea "
-  },
-  {
-    "usuario": "playa",
-    "titulo": "Fiesta tranquis en la playa",
-    "descripcion": "Fiesta chida en acapulco",
-    "fecha": "2025-07-30",
-    "hora": "19:30",
-    "lugar": "en la playa mas cercana Acapulco "
   },
   {
     "usuario": "bosque",

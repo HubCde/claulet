@@ -80,6 +80,7 @@ export const eliminarEvento = (req, res) => {
 
   console.log("🔍 Eliminando evento del usuario:", usuario);
 
+  // Eliminar del archivo eventos.json
   const eventos = cargarEventos();
   const eventosActualizados = eventos.filter(e => e.usuario !== usuario);
 
@@ -89,13 +90,15 @@ export const eliminarEvento = (req, res) => {
 
   guardarEventos(eventosActualizados);
 
-  console.log("🧙‍♂️ Eliminando usuario:", usuario);
+  // Eliminar del archivo usuarios.json
+  console.log("🕵️‍♂️ Eliminando usuario:", usuario);
   const rutaUsuarios = "usuarios.json";
   let usuarios = JSON.parse(fs.readFileSync(rutaUsuarios, 'utf8'));
   delete usuarios[usuario];
   fs.writeFileSync(rutaUsuarios, JSON.stringify(usuarios, null, 2));
 
-  console.log("🏃‍♂️🏃‍♀️ Eliminando Invitados del usuario:", usuario);
+  // Eliminar del archivo invitados.json
+  console.log("🕵️‍♂️ Eliminando Invitados del usuario:", usuario);
   const rutaInvitados = "invitados.json";
   if (fs.existsSync(rutaInvitados)) {
     let invitados = JSON.parse(fs.readFileSync(rutaInvitados, 'utf8'));

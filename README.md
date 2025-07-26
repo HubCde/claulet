@@ -75,7 +75,7 @@ Claulet/
 - Creacion de perfil del organizador desde el administrador (Con datos de su evento).
 - Edicion de eventos desde el administrador.
 - Edicion de perfil del organizador.
-- Eliminacion de eventos y perfil de los organizadores desde el administrador. 
+- Eliminacion de eventos, perfil de los organizadores y lista de invitados desde el administrador. 
 - Cambio de contraseña desde el perfil administrador.
 - Se añade invitado desde el gestor de invitados en admin.
 - Se puede filtrar por evento y se crea tabla dinamica con invitados segun el evento.

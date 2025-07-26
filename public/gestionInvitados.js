@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${inv.estatus}</td>
             <td><button class="btn btn-sm btn-outline-info"><i class="fas fa-qrcode"></i></button></td>
             <td>
-              <button class="btn btn-sm btn-outline-secondary me-1"><i class="fas fa-edit"></i></button>
+              <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="modal" data-bs-target="#modalEditarInvitado"><i class="fas fa-edit"></i></button>
               <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
             </td>
           </tr>

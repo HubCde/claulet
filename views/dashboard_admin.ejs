@@ -220,7 +220,8 @@
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h6>Lista de Invitados</h6>
                                         <div>
-                                            <input type="file" id="inputSubirLista" accept=".xlsx,.csv" style="display: none;">
+                                            <input type="file" id="inputSubirLista" accept=".xlsx,.csv"
+                                                style="display: none;">
                                             <button class="btn btn-outline-primary btn-sm me-2" id="btnSubirLista"><i
                                                     class="fas fa-upload me-1"></i> Subir Lista (CSV/Excel)</button>
                                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
@@ -444,7 +445,7 @@
         </div>
     </div>
 
-    <!-- Edit Event Modal (Can be reused with data population) -->
+    <!-- MODAL: Editar Evento -->
     <div class="modal fade" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -495,7 +496,7 @@
         </div>
     </div>
 
-    <!-- Password Management Modal -->
+    <!-- MODAL: Modificar Contraseña -->
     <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -554,18 +555,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="cellInv" class="form-label">Celular</label>
-                        <input type="tel"  class="form-control" id="cellInv" required>
+                        <input type="tel" class="form-control" id="cellInv" required>
                     </div>
                     <div class="mb-3">
                         <label for="urlInv" class="form-label">URL de invitación</label>
                         <input type="url" class="form-control" id="urlInv" placeholder="https://tusitio.com">
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="comentariosInv" class="form-label">Comentarios</label>
                         <input type="text" class="form-control" id="comentariosInv" required>
                     </div>
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Guardar Invitado</button>
@@ -573,6 +574,66 @@
             </form>
         </div>
     </div>
+
+    <!-- MODAL: Modificar Invitado-->
+    
+    <div class="modal fade" id="modalEditarInvitado" tabindex="-1" aria-labelledby="modalEditarInvitadoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="formEditarInvitado" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarInvitado">Editar Invitado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="idInvitadoEditar">
+                    <input type="hidden" id="eventoEditarInput">
+
+                    <div class="mb-3">
+                        <label for="nombreInvitadoEditar" class="form-label">Nombre del invitado</label>
+                        <input type="text" class="form-control" id="nombreInvitadoEditar" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirmarPorEditar" class="form-label">Confirmar Por</label>
+                        <input type="text" class="form-control" id="confirmarPorEditar" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ladaEditar" class="form-label">LADA</label>
+                        <select id="ladaEditar" name="ladaEditar" required class="form-control">
+                            <option value="">Selecciona</option>
+                            <option value="+52">🇲🇽 México (+52)</option>
+                            <option value="+1">🇺🇸 USA (+1)</option>
+                            <option value="+34">🇪🇸 España (+34)</option>
+                            <option value="+57">🇨🇴 Colombia (+57)</option>
+                            <option value="+54">🇦🇷 Argentina (+54)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cellInvEditar" class="form-label">Celular</label>
+                        <input type="tel" class="form-control" id="cellInvEditar" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="urlInvEditar" class="form-label">URL de invitación</label>
+                        <input type="url" class="form-control" id="urlInvEditar" placeholder="https://tusitio.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comentariosInvEditar" class="form-label">Comentarios</label>
+                        <input type="text" class="form-control" id="comentariosInvEditar">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Actualizar Invitado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Bootstrap Bundle con Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -583,6 +644,7 @@
     <script src="/agregarInvitado.js"></script>
     <script src="/gestionInvitados.js"></script>
     <script src="/subirListaInvitados.js"></script>
+    <script src="/editarInvitados.js"></script>
 
 
     <script>

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       invitados.forEach(inv => {
         tbody.insertAdjacentHTML("beforeend", `
-          <tr>
+          <tr data-evento="${evento}" >
             <td>${inv.nombre}</td>
             <td>${inv.lada} ${inv.whats}</td>
             <td>${inv.estatus}</td>
@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 data-estatus="${inv.estatus}"
                 data-evento="${evento}"
               ><i class="fas fa-edit"></i></button>
-              <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
+              <button class="btn btn-sm btn-outline-danger btn-eliminar-inv"
+                data-nombre="${inv.nombre}"
+                data-whats="${inv.whats}"
+                data-evento="${evento}"
+              ><i class="fas fa-trash-alt"></i></button>
             </td>
           </tr>
         `);
@@ -54,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
   select.addEventListener("change", () => {
     cargarInvitados(select.value);
   });
+  
 });

@@ -21,30 +21,12 @@
   ],
   "yett": [
     {
-      "nombre": "gary",
-      "confirmar": "Sí",
-      "lada": "+52",
-      "whats": "1234567892",
-      "urlInv": "https://gary.com",
-      "coments": "Confirmado asistencia",
-      "estatus": "Aceptada"
-    },
-    {
       "nombre": "don cangrejo",
       "confirmar": "No",
       "lada": "+52",
       "whats": "0987654323",
       "urlInv": "https://doncangre.com.mx",
       "coments": "Si ",
-      "estatus": "Aceptada"
-    },
-    {
-      "nombre": "Arenita mejillas",
-      "confirmar": "Sí",
-      "lada": "+52",
-      "whats": "1122334457",
-      "urlInv": "https://sivamos.com",
-      "coments": "Llegará tarde",
       "estatus": "Aceptada"
     }
   ]

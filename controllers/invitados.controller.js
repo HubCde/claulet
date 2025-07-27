@@ -165,3 +165,31 @@ export const actualizarInvitado = (req, res) => {
   res.json({ mensaje: "Invitado actualizado correctamente", invitado: data[evento][index] });
 };
 
+export const eliminarInvitado = (req, res) => {
+  const { evento, whats } = req.params;
+
+  console.log("🚀 Se recibieron los datos DELETE");
+  console.log(req.params);
+  const data = cargarInvitados();
+
+  if (!data[evento]) {
+    return res.status(404).json({ mensaje: "Evento no encontrado" });
+  }
+
+  const invitados = data[evento];
+  const index = invitados.findIndex(inv => inv.whats === whats);
+
+  if (index === -1) {
+    return res.status(404).json({ mensaje: "Invitado no encontrado" });
+  }
+
+  // Elimina al invitado encontrado
+  data[evento].splice(index, 1);
+
+  // Puedes eliminar el evento si ya no quedan invitados
+  // if (data[evento].length === 0) delete data[evento];
+
+  guardarInvitados(data);
+  res.json({ mensaje: "Invitado eliminado exitosamente" });
+};
+

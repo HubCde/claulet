@@ -385,7 +385,8 @@
     </div>
 
     <!-- Modals for Event Management -->
-    <!-- New Event Modal -->
+
+    <!-- MODAL: Crear Evento -->
     <div class="modal fade" id="newEventModal" tabindex="-1" aria-labelledby="newEventModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -576,7 +577,6 @@
     </div>
 
     <!-- MODAL: Modificar Invitado-->
-    
     <div class="modal fade" id="modalEditarInvitado" tabindex="-1" aria-labelledby="modalEditarInvitadoLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -586,22 +586,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" id="idInvitadoEditar">
-                    <input type="hidden" id="eventoEditarInput">
+                    <input type="hidden" id="inputEventIv" name="evento" />
 
                     <div class="mb-3">
                         <label for="nombreInvitadoEditar" class="form-label">Nombre del invitado</label>
-                        <input type="text" class="form-control" id="nombreInvitadoEditar" required>
+                        <input type="text" class="form-control" id="editNombreIv" name="nombre" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="confirmarPorEditar" class="form-label">Confirmar Por</label>
-                        <input type="text" class="form-control" id="confirmarPorEditar" required>
+                        <input type="text" class="form-control" id="editConfirmar" name="confirmar" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="ladaEditar" class="form-label">LADA</label>
-                        <select id="ladaEditar" name="ladaEditar" required class="form-control">
+                        <select id="editLadaIv" name="lada" required class="form-control">
                             <option value="">Selecciona</option>
                             <option value="+52">🇲🇽 México (+52)</option>
                             <option value="+1">🇺🇸 USA (+1)</option>
@@ -613,17 +612,22 @@
 
                     <div class="mb-3">
                         <label for="cellInvEditar" class="form-label">Celular</label>
-                        <input type="tel" class="form-control" id="cellInvEditar" required>
+                        <input type="tel" class="form-control" id="editWhatsIv" name="whats" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="urlInvEditar" class="form-label">URL de invitación</label>
-                        <input type="url" class="form-control" id="urlInvEditar" placeholder="https://tusitio.com">
+                        <input type="url" class="form-control" id="editURLIv" name="editURLIv" placeholder="https://tusitio.com">
                     </div>
 
                     <div class="mb-3">
                         <label for="comentariosInvEditar" class="form-label">Comentarios</label>
-                        <input type="text" class="form-control" id="comentariosInvEditar">
+                        <input type="text" class="form-control" id="editComentsIv" name="coments">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="estatusInv" class="form-label">Estatus</label>
+                        <input type="text" class="form-control" id="editEstatusIv" name="estatus">
                     </div>
                 </div>
 

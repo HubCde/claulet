@@ -1,41 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const botonesEditarInvitado = document.querySelectorAll(".btn-editar-invitado");
   const formularioEditarInvitado = document.getElementById("formEditarInvitado");
+  const inputEventoInvi = document.getElementById("eventoSeleccionadoInput");
 
   // ✅ Al hacer clic en un botón de editar invitado
-  botonesEditarInvitado.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // Llenamos los campos del modal con los datos del invitado
-      document.getElementById("usuarioInvitadoEditar").value = btn.dataset.usuario;
-      document.getElementById("editarNombreInvitado").value = btn.dataset.nombre;
-      document.getElementById("editarConfirmarPor").value = btn.dataset.confirmar;
-      document.getElementById("editarLada").value = btn.dataset.lada;
-      document.getElementById("editarCelular").value = btn.dataset.celular;
-      document.getElementById("editarUrlInv").value = btn.dataset.url || "";
-      document.getElementById("editarComentariosInv").value = btn.dataset.comentarios || "";
-    });
-  });
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".editar-invitado")) {
+    const btn = e.target.closest(".editar-invitado");
+
+    document.getElementById("inputEventIv").value = btn.dataset.evento;
+    document.getElementById("editNombreIv").value = btn.dataset.nombre;
+    document.getElementById("editConfirmar").value = btn.dataset.confirmar;
+    document.getElementById("editLadaIv").value = btn.dataset.lada;
+    document.getElementById("editWhatsIv").value = btn.dataset.whats;
+    document.getElementById("editURLIv").value = btn.dataset.urlinv;
+    document.getElementById("editComentsIv").value = btn.dataset.coments;
+    document.getElementById("editEstatusIv").value = btn.dataset.estatus;
+
+  }
+});
 
   // ✅ Al enviar el formulario de edición
-  formularioEditarInvitado.addEventListener("submit", async (e) => {
+  const formEditar = document.getElementById("formEditarInvitado");
+
+  formEditar.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const usuario = document.getElementById("usuarioInvitadoEditar").value;
+    const evento = document.getElementById("inputEventIv").value;
+    const nombre = document.getElementById("editNombreIv").value;
+    const confirmar = document.getElementById("editConfirmar").value;
+    const lada = document.getElementById("editLadaIv").value;
+    const whats = document.getElementById("editWhatsIv").value;
+    const urlInv = document.getElementById("editURLIv").value;
+    const coments = document.getElementById("editComentsIv").value;
+    const estatus = document.getElementById("editEstatusIv").value;
 
     try {
-      await axios.put(`/api/invitados/${usuario}`, {
-        nombre: document.getElementById("editarNombreInvitado").value,
-        confirmar: document.getElementById("editarConfirmarPor").value,
-        lada: document.getElementById("editarLada").value,
-        celular: document.getElementById("editarCelular").value,
-        url: document.getElementById("editarUrlInv").value,
-        comentarios: document.getElementById("editarComentariosInv").value,
+      await axios.put(`/api/invitados/${evento}`, {
+        evento,
+        nombre,
+        confirmar,
+        lada,
+        whats,
+        urlInv,
+        coments,
+        estatus
       });
 
       alert("✅ Invitado actualizado correctamente");
-      location.reload(); // Refresca la lista
-    } catch (err) {
-      console.error("❌ Error al actualizar invitado:", err);
+      window.location.reload();
+    } catch (error) {
+      console.error("❌ Error al actualizar invitado:", error);
       alert("Error al actualizar el invitado");
     }
   });

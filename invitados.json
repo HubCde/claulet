@@ -25,27 +25,27 @@
       "confirmar": "Sí",
       "lada": "+52",
       "whats": "1234567892",
-      "urlInv": "https://wa.me/521233",
+      "urlInv": "https://gary.com",
       "coments": "Confirmado asistencia",
-      "estatus": "Pendiente"
+      "estatus": "Aceptada"
     },
     {
       "nombre": "don cangrejo",
       "confirmar": "No",
       "lada": "+52",
       "whats": "0987654323",
-      "urlInv": "https://wa.me/529833",
-      "coments": "No asistirá",
-      "estatus": "Cancelado"
+      "urlInv": "https://doncangre.com.mx",
+      "coments": "Si ",
+      "estatus": "Aceptada"
     },
     {
       "nombre": "Arenita mejillas",
       "confirmar": "Sí",
       "lada": "+52",
       "whats": "1122334457",
-      "urlInv": "https://wa.me/521133",
+      "urlInv": "https://sivamos.com",
       "coments": "Llegará tarde",
-      "estatus": "Pendiente"
+      "estatus": "Aceptada"
     }
   ]
 }

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const res = await axios.get(`/api/invitados/${evento}`);
       const invitados = res.data;
+      console.log("✅ Invitados recibidos:", invitados); // <--- Esto te mostrará los datos recibidos
 
       tbody.innerHTML = "";
 
@@ -22,7 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${inv.estatus}</td>
             <td><button class="btn btn-sm btn-outline-info"><i class="fas fa-qrcode"></i></button></td>
             <td>
-              <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="modal" data-bs-target="#modalEditarInvitado"><i class="fas fa-edit"></i></button>
+              <button class="btn btn-sm btn-outline-secondary me-1 editar-invitado" 
+                data-bs-toggle="modal" 
+                data-bs-target="#modalEditarInvitado"
+                data-nombre="${inv.nombre}"
+                data-confirmar="${inv.confirmar}"
+                data-lada="${inv.lada}"
+                data-whats="${inv.whats}"
+                data-urlinv="${inv.urlInv}"
+                data-coments="${inv.coments}"
+                data-estatus="${inv.estatus}"
+                data-evento="${evento}"
+              ><i class="fas fa-edit"></i></button>
               <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
             </td>
           </tr>

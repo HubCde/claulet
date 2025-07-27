@@ -124,3 +124,44 @@ export const obtenerInvitadosPorEvento = (req, res) => {
 
   res.json(data[evento]); // Retorna lista de invitados
 };
+
+export const actualizarInvitado = (req, res) => {
+  const { evento } = req.params;
+  const { nombre, confirmar, lada, whats, urlInv, coments, estatus } = req.body;
+  
+  console.log("🚀 Se recibieron los datos correctamente 😎");
+  console.log(req.body);
+
+  if (!nombre || !confirmar || !lada || !whats || !urlInv|| !coments || !estatus) {
+    console.log("🤦‍♂️ Tsss te faltaron datos");
+    return res.status(400).json({ error: "Faltan datos del invitado" });
+  }
+
+  const data = cargarInvitados();
+
+  if (!data[evento]) {
+    return res.status(404).json({ mensaje: "Evento no encontrado" });
+  }
+
+  const invitados = data[evento];
+  const index = invitados.findIndex(inv => inv.nombre === nombre);
+
+  if (index === -1) {
+    return res.status(404).json({ error: `Invitado "${nombre}" no encontrado en el evento "${evento}"` });
+  }
+
+   // Actualizar los datos del invitado
+  data[evento][index] = {
+    nombre,
+    confirmar,
+    lada,
+    whats,
+    urlInv,
+    coments,
+    estatus
+  };
+
+  guardarInvitados(data);
+  res.json({ mensaje: "Invitado actualizado correctamente", invitado: data[evento][index] });
+};
+

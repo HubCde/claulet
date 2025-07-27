@@ -21,7 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${inv.nombre}</td>
             <td>${inv.lada} ${inv.whats}</td>
             <td>${inv.estatus}</td>
-            <td><button class="btn btn-sm btn-outline-info"><i class="fas fa-qrcode"></i></button></td>
+            <td>
+              <button class="btn btn-sm btn-outline-info"
+                data-bs-toggle="modal"
+                data-bs-target="#modalQrInvitado"
+                data-nombre="${inv.nombre}"
+                data-urlinv="${inv.urlInv}"
+              ><i class="fas fa-qrcode"></i></button>
+            </td>
             <td>
               <button class="btn btn-sm btn-outline-secondary me-1 editar-invitado" 
                 data-bs-toggle="modal" 

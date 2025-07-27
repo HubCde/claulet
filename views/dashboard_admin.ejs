@@ -617,7 +617,8 @@
 
                     <div class="mb-3">
                         <label for="urlInvEditar" class="form-label">URL de invitación</label>
-                        <input type="url" class="form-control" id="editURLIv" name="editURLIv" placeholder="https://tusitio.com">
+                        <input type="url" class="form-control" id="editURLIv" name="editURLIv"
+                            placeholder="https://tusitio.com">
                     </div>
 
                     <div class="mb-3">
@@ -635,6 +636,23 @@
                     <button type="submit" class="btn btn-success">Actualizar Invitado</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Mostrar Codigo QR -->
+    <div class="modal fade" id="modalQrInvitado" tabindex="-1" aria-labelledby="modalQrInvitadoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalQrInvitadoLabel">Código QR de Invitado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="qrContainer"></div>
+                    <p id="nombreInvitadoQR" class="mt-2"></p>
+                </div>
+            </div>
         </div>
     </div>
 

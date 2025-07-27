@@ -81,6 +81,7 @@ Claulet/
 - Se puede filtrar por evento y se crea tabla dinamica con invitados segun el evento.
 - Todos los invitados comienzan con estatus pendiente hasta que se confirme su asistencia.
 - Se puede importar lista de invitados desde el administrador.
+- Se puede editar invitado desde el administrador. 
 
 
 

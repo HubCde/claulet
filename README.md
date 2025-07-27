@@ -82,6 +82,7 @@ Claulet/
 - Todos los invitados comienzan con estatus pendiente hasta que se confirme su asistencia.
 - Se puede importar lista de invitados desde el administrador.
 - Se puede editar invitado desde el administrador. 
+- Se puede eliminar invitado desde el administrador.
 
 
 

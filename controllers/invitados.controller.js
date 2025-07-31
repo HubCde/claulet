@@ -2,7 +2,11 @@ import fs from "fs";
 import path from "path";
 import xlsx from "xlsx";
 import csvParser from "csv-parser";
-import { cargarInvitados, guardarInvitados } from "../models/invitados.models.js";
+import {
+  cargarInvitados,
+  guardarInvitados,
+} from "../models/invitados.models.js";
+import { generarToken, generarLink } from "../utils/token.js";
 
 export const subirListaInvitados = (req, res) => {
   const { evento } = req.body; // evento viene en el formData
@@ -40,20 +44,30 @@ export const subirListaInvitados = (req, res) => {
         const data = cargarInvitados();
         if (!data[evento]) data[evento] = [];
 
-        invitados.forEach((inv) => data[evento].push(inv));
+        invitados.forEach((inv) => {
+          if (!inv.token || !inv.link) {
+            const pases = parseInt(inv.confirmar) || 1;
+            const token = generarToken(inv.nombre, pases);
+            const link = generarLink(inv.nombre, token);
+            inv.token = token;
+            inv.link = link;
+          }
+          data[evento].push(inv)
+        });
 
         guardarInvitados(data);
 
         fs.unlinkSync(archivo.path); // borrar archivo temporal
 
-        res.status(200).json({ mensaje: "Lista CSV subida y procesada exitosamente" });
+        res
+          .status(200)
+          .json({ mensaje: "Lista CSV subida y procesada exitosamente" });
       })
       .on("error", (error) => {
         console.error("Error leyendo CSV:", error);
         fs.unlinkSync(archivo.path);
         res.status(500).json({ error: "Error al procesar el archivo CSV" });
       });
-
   } else if (ext === ".xlsx") {
     try {
       const workbook = xlsx.readFile(archivo.path);
@@ -64,6 +78,9 @@ export const subirListaInvitados = (req, res) => {
       if (!data[evento]) data[evento] = [];
 
       invitados.forEach((inv) => {
+        const pases = parseInt(inv.confirmar) || 1;
+        const token = generarToken(inv.nombre, pases);
+        const link = generarLink(inv.nombre, token);
         data[evento].push({
           nombre: inv.nombre || "",
           confirmar: inv.confirmar || "",
@@ -72,6 +89,8 @@ export const subirListaInvitados = (req, res) => {
           urlInv: inv.urlInv || "",
           coments: inv.coments || "",
           estatus: inv.estatus || "",
+          token,
+          link
         });
       });
 
@@ -79,8 +98,9 @@ export const subirListaInvitados = (req, res) => {
 
       fs.unlinkSync(archivo.path);
 
-      res.status(200).json({ mensaje: "Lista Excel subida y procesada exitosamente" });
-
+      res
+        .status(200)
+        .json({ mensaje: "Lista Excel subida y procesada exitosamente" });
     } catch (error) {
       console.error("Error leyendo Excel:", error);
       fs.unlinkSync(archivo.path);
@@ -98,7 +118,15 @@ export const agregarInvitado = (req, res) => {
   console.log("🚀 Se recibieron los datos correctamente 😎");
   console.log(req.body);
 
-  if (!nombre || !confirmar || !lada || !whats || !urlInv || !coments || !estatus) {
+  if (
+    !nombre ||
+    !confirmar ||
+    !lada ||
+    !whats ||
+    !urlInv ||
+    !coments ||
+    !estatus
+  ) {
     console.log("🤦‍♂️ Tsss te faltaron datos");
     return res.status(400).json({ error: "Faltan datos del invitado" });
   }
@@ -106,8 +134,21 @@ export const agregarInvitado = (req, res) => {
   const data = cargarInvitados();
 
   if (!data[evento]) data[evento] = [];
+  const pases = parseInt(confirmar) || 1;
+  const token = generarToken(nombre, pases);
+  const link = generarLink(nombre, token);
 
-  data[evento].push({ nombre, confirmar, lada, whats, urlInv, coments, estatus });
+  data[evento].push({
+    nombre,
+    confirmar,
+    lada,
+    whats,
+    urlInv,
+    coments,
+    estatus,
+    token,
+    link
+  });
 
   guardarInvitados(data);
 
@@ -128,11 +169,19 @@ export const obtenerInvitadosPorEvento = (req, res) => {
 export const actualizarInvitado = (req, res) => {
   const { evento } = req.params;
   const { nombre, confirmar, lada, whats, urlInv, coments, estatus } = req.body;
-  
+
   console.log("🚀 Se recibieron los datos correctamente 😎");
   console.log(req.body);
 
-  if (!nombre || !confirmar || !lada || !whats || !urlInv|| !coments || !estatus) {
+  if (
+    !nombre ||
+    !confirmar ||
+    !lada ||
+    !whats ||
+    !urlInv ||
+    !coments ||
+    !estatus
+  ) {
     console.log("🤦‍♂️ Tsss te faltaron datos");
     return res.status(400).json({ error: "Faltan datos del invitado" });
   }
@@ -144,13 +193,18 @@ export const actualizarInvitado = (req, res) => {
   }
 
   const invitados = data[evento];
-  const index = invitados.findIndex(inv => inv.nombre === nombre);
+  const index = invitados.findIndex((inv) => inv.nombre === nombre);
 
   if (index === -1) {
-    return res.status(404).json({ error: `Invitado "${nombre}" no encontrado en el evento "${evento}"` });
+    return res.status(404).json({
+      error: `Invitado "${nombre}" no encontrado en el evento "${evento}"`,
+    });
   }
 
-   // Actualizar los datos del invitado
+  // Actualizar los datos del invitado
+  const pases = parseInt(confirmar) || 1;
+  const token = generarToken(nombre, pases);
+  const link = generarLink(nombre, token);
   data[evento][index] = {
     nombre,
     confirmar,
@@ -158,11 +212,16 @@ export const actualizarInvitado = (req, res) => {
     whats,
     urlInv,
     coments,
-    estatus
+    estatus,
+    token,
+    link
   };
 
   guardarInvitados(data);
-  res.json({ mensaje: "Invitado actualizado correctamente", invitado: data[evento][index] });
+  res.json({
+    mensaje: "Invitado actualizado correctamente",
+    invitado: data[evento][index],
+  });
 };
 
 export const eliminarInvitado = (req, res) => {
@@ -177,7 +236,7 @@ export const eliminarInvitado = (req, res) => {
   }
 
   const invitados = data[evento];
-  const index = invitados.findIndex(inv => inv.whats === whats);
+  const index = invitados.findIndex((inv) => inv.whats === whats);
 
   if (index === -1) {
     return res.status(404).json({ mensaje: "Invitado no encontrado" });
@@ -192,4 +251,3 @@ export const eliminarInvitado = (req, res) => {
   guardarInvitados(data);
   res.json({ mensaje: "Invitado eliminado exitosamente" });
 };
-

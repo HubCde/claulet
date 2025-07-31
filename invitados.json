@@ -1,16 +1,28 @@
 {
-  "yett": [
-    {
-      "nombre": "don cangrejo",
-      "confirmar": "No",
-      "lada": "+52",
-      "whats": "0987654323",
-      "urlInv": "https://doncangre.com.mx",
-      "coments": "Si ",
-      "estatus": "Aceptada"
-    }
-  ],
+  "yett": [],
   "gumy": [
+    {
+      "nombre": "chuy",
+      "confirmar": "2",
+      "lada": "+52",
+      "whats": "4426055052",
+      "urlInv": "http://chuy.com",
+      "coments": "no aplica",
+      "estatus": "Pendiente",
+      "token": "Y9wKTpzg0g",
+      "link": "/index.html?Invitado=chuy&token=Y9wKTpzg0g"
+    },
+    {
+      "nombre": "gary",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1234567892",
+      "urlInv": "https://wa.me/521233",
+      "coments": "Confirmado asistencia",
+      "estatus": "Pendiente",
+      "token": "MM_u_5kpvV",
+      "link": "/index.html?Invitado=gary&token=MM_u_5kpvV"
+    },
     {
       "nombre": "don cangrejo",
       "confirmar": "No",
@@ -18,7 +30,9 @@
       "whats": "0987654323",
       "urlInv": "https://wa.me/529833",
       "coments": "No asistirá",
-      "estatus": "Cancelado"
+      "estatus": "Cancelado",
+      "token": "gZwGXe90te",
+      "link": "/index.html?Invitado=don+cangrejo&token=gZwGXe90te"
     },
     {
       "nombre": "Arenita mejillas",
@@ -27,7 +41,9 @@
       "whats": "1122334457",
       "urlInv": "https://wa.me/521133",
       "coments": "Llegará tarde",
-      "estatus": "Pendiente"
+      "estatus": "Pendiente",
+      "token": "aSUsHmI_PB",
+      "link": "/index.html?Invitado=Arenita+mejillas&token=aSUsHmI_PB"
     }
   ]
 }

@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 data-bs-target="#modalQrInvitado"
                 data-nombre="${inv.nombre}"
                 data-urlinv="${inv.urlInv}"
+                data-token="${inv.token || ''}"
+                data-link="${inv.link || ''}"
               ><i class="fas fa-qrcode"></i></button>
             </td>
             <td>
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Al iniciar
   if (select.value) cargarInvitados(select.value);
+  
 
   // Al cambiar evento
   select.addEventListener("change", () => {

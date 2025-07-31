@@ -202,10 +202,11 @@ export const actualizarInvitado = (req, res) => {
   }
 
   // Actualizar los datos del invitado
-  const pases = parseInt(confirmar) || 1;
-  const token = generarToken(nombre, pases);
-  const link = generarLink(nombre, token);
+  const invitadoExistente = data[evento][index];
+  const token = invitadoExistente.token || generarToken(nombre, parseInt(confirmar) || 1);
+  const link = invitadoExistente.link || generarLink(nombre, token);
   data[evento][index] = {
+    invitadoExistente,
     nombre,
     confirmar,
     lada,

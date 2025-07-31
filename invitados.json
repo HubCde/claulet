@@ -1,24 +1,4 @@
 {
-  "claudy": [
-    {
-      "nombre": "chuy",
-      "confirmar": "1",
-      "lada": "+52",
-      "whats": "4426055052",
-      "urlInv": "https://InvitacionChuy.com",
-      "coments": "NA",
-      "estatus": "Pendiente"
-    },
-    {
-      "nombre": "yet",
-      "confirmar": "3",
-      "lada": "+52",
-      "whats": "4426086765",
-      "urlInv": "http://layet.com",
-      "coments": "NA",
-      "estatus": "Pendiente"
-    }
-  ],
   "yett": [
     {
       "nombre": "don cangrejo",
@@ -28,6 +8,26 @@
       "urlInv": "https://doncangre.com.mx",
       "coments": "Si ",
       "estatus": "Aceptada"
+    }
+  ],
+  "gumy": [
+    {
+      "nombre": "don cangrejo",
+      "confirmar": "No",
+      "lada": "+52",
+      "whats": "0987654323",
+      "urlInv": "https://wa.me/529833",
+      "coments": "No asistirá",
+      "estatus": "Cancelado"
+    },
+    {
+      "nombre": "Arenita mejillas",
+      "confirmar": "Sí",
+      "lada": "+52",
+      "whats": "1122334457",
+      "urlInv": "https://wa.me/521133",
+      "coments": "Llegará tarde",
+      "estatus": "Pendiente"
     }
   ]
 }

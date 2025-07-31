@@ -1,7 +1,7 @@
 [
   {
     "usuario": "yett",
-    "titulo": "la yetfest 2.0",
+    "titulo": "la yetfest ",
     "descripcion": "la yet fest fiesta",
     "fecha": "2025-07-15",
     "hora": "22:35",
@@ -16,11 +16,11 @@
     "lugar": "Campamento campbell o donde nos agarre la noche "
   },
   {
-    "usuario": "claudy",
-    "titulo": "Geek party",
-    "descripcion": "Es la fiesta de claudy",
-    "fecha": "2025-07-31",
-    "hora": "20:43",
-    "lugar": "Queretaro"
+    "usuario": "gumy",
+    "titulo": "gumyfest",
+    "descripcion": "no hay descripcion ",
+    "fecha": "2025-08-01",
+    "hora": "22:46",
+    "lugar": "casa de gumy"
   }
 ]

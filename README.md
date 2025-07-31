@@ -87,6 +87,7 @@ Claulet/
 - Se puede editar invitado desde el administrador. 
 - Se puede eliminar invitado desde el administrador.
 - El invitado cuenta con url, token y Qr, se visualizan desde el administrador.
+- Se mantiene token y url del usuario aun que se modifique este.
 
 
 

@@ -45,8 +45,11 @@ Claulet/
 │   ├── gestionEventos.js
 │   ├── gestionInvitados.js
 │   ├── subirListaInvitados.js
+│   ├── qrInvitado.js
 │   └── main.js
 ├── temp_uploads/
+├── utils/
+│   └── token.js
 └── usuarios.json
 └── eventos.json
 └── package-lock.json
@@ -83,6 +86,7 @@ Claulet/
 - Se puede importar lista de invitados desde el administrador.
 - Se puede editar invitado desde el administrador. 
 - Se puede eliminar invitado desde el administrador.
+- El invitado cuenta con url, token y Qr, se visualizan desde el administrador.
 
 
 
